@@ -5,12 +5,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const encrypt = require("mongoose-encryption");
-// var err = require("err-code");
-// const model = require("nodejs-model");
+
 
 const app = express();
-
-// console.log(process.env.API_KEY);
 
 app.set("view engine", "ejs");
 
@@ -75,7 +72,6 @@ User.findOne({email:username}, function(req, foundUser){
 });
 
 });
-// process.env.PORT
-app.listen(5000, function() {
+app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
